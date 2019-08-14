@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reddit Search App</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+<nav class="navbar mb-3">
+    <div class="container">
+      <div class="logo"><img src="https://www.redditinc.com/assets/images/site/logo.svg" />
+      </div>
+    </div>
+  </nav>
+  <div id="search-container" class="container">
+    <div id="search" class="card card-body bg-light mb-2">
+      <h5>Search Term</h5>
+      <form id="search-form">
+        <div class="form-group">
+          <input type="text" id="search-input" class="form-control mb-3" placeholder="...">
+        </div>
+        <h5>Sort By: </h5>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input ml-2" type="radio" name="sortby" value="relevance" checked>
+          <label class="form-check-label">
+            Relevance
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="sortby" value="new">
+          <label class="form-check-label">
+            Latest
+          </label>
+        </div>
+        <h5 class="mt-2">Limit: </h5>
+        <div class="form-group">
+          <select name="limit" id="limit" class="form-control">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="25" selected>25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-block mt-4">Search</button>
+      </form>
+    </div>
+    <div id="results"></div>
+  </div>    
+<footer>&copy; logo: Reddit, Inc. All rights reserved.</footer>
+<script type="module" src="./index.js"></script>
+</body>
+</html>
